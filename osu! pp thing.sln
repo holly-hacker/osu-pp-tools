@@ -5,6 +5,12 @@ VisualStudioVersion = 15.0.26730.16
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "osu! pp thing", "osu! pp thing\osu! pp thing.csproj", "{C4F0C3A6-7A8A-48D4-83A3-9116DEE8D96C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "osu-database-reader", "osu-database-reader\osu-database-reader\osu-database-reader.csproj", "{C3078606-8055-4122-845D-7F9A0154883D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "osu.Shared", "osu-database-reader\osu.Shared\osu.Shared\osu.Shared.csproj", "{00BF5AF6-5461-47EA-B6CB-749798832988}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OppaiSharp", "OppaiSharp\OppaiSharp\OppaiSharp.csproj", "{AD29051A-0960-4E92-BAA9-7AC50827F823}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +21,18 @@ Global
 		{C4F0C3A6-7A8A-48D4-83A3-9116DEE8D96C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C4F0C3A6-7A8A-48D4-83A3-9116DEE8D96C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C4F0C3A6-7A8A-48D4-83A3-9116DEE8D96C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3078606-8055-4122-845D-7F9A0154883D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3078606-8055-4122-845D-7F9A0154883D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3078606-8055-4122-845D-7F9A0154883D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3078606-8055-4122-845D-7F9A0154883D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{00BF5AF6-5461-47EA-B6CB-749798832988}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00BF5AF6-5461-47EA-B6CB-749798832988}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00BF5AF6-5461-47EA-B6CB-749798832988}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00BF5AF6-5461-47EA-B6CB-749798832988}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD29051A-0960-4E92-BAA9-7AC50827F823}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD29051A-0960-4E92-BAA9-7AC50827F823}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD29051A-0960-4E92-BAA9-7AC50827F823}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD29051A-0960-4E92-BAA9-7AC50827F823}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

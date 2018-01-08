@@ -34,7 +34,8 @@
   <ItemGroup>
     <Reference Include="osu!">
       <HintPath>..\References\osu!.exe</HintPath>
-      <Private>False</Private>
+      <Private>True</Private>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -51,6 +52,20 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\OppaiSharp\OppaiSharp\OppaiSharp.csproj">
+      <Project>{ad29051a-0960-4e92-baa9-7ac50827f823}</Project>
+      <Name>OppaiSharp</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\osu-database-reader\osu-database-reader\osu-database-reader.csproj">
+      <Project>{c3078606-8055-4122-845d-7f9a0154883d}</Project>
+      <Name>osu-database-reader</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\osu-database-reader\osu.Shared\osu.Shared\osu.Shared.csproj">
+      <Project>{00bf5af6-5461-47ea-b6cb-749798832988}</Project>
+      <Name>osu.Shared</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
