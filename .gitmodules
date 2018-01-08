@@ -1,0 +1,6 @@
+[submodule "OppaiSharp"]
+	path = OppaiSharp
+	url = https://github.com/HoLLy-HaCKeR/OppaiSharp
+[submodule "osu-database-reader"]
+	path = osu-database-reader
+	url = https://github.com/HoLLy-HaCKeR/osu-database-reader
