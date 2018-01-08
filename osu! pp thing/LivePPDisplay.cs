@@ -16,8 +16,6 @@ namespace osu_pp_thing
     {
         public static void Run()
         {
-            Helpers.WaitForOsu();
-
             //get IPC
             var ipc = (InterProcessOsu)Activator.GetObject(typeof(InterProcessOsu), "ipc://osu!/loader");
 
@@ -56,20 +54,7 @@ namespace osu_pp_thing
             Console.WriteLine("osu! closed, we're closing too...");
         }
 
-        public static void SetAsmResolver()
-        {
-            //add assembly resolver
-            AppDomain.CurrentDomain.AssemblyResolve += CurrentDomainOnAssemblyResolve;
-        }
-
-        private static Assembly CurrentDomainOnAssemblyResolve(object sender, ResolveEventArgs args)
-        {
-            return new AssemblyName(args.Name).Name == "osu!" && Helpers.CheckOsuExists() 
-                ? Assembly.LoadFile(Helpers.GetOsu().MainModule.FileName) 
-                : null;
-        }
-
-        private static void Print(Beatmap map, Mods[] allMods)
+        internal static void Print(Beatmap map, Mods[] allMods)
         {
             Console.WriteLine($"Map: {map.Artist} - {map.Title} [{map.Version}]");
             Console.WriteLine($"Mapper: {map.Creator}");
@@ -96,7 +81,7 @@ namespace osu_pp_thing
                     Console.Write($" | {(pp.Total.ToString("F2") + "pp").PadRight(9)} {("(" + percent.ToString(CultureInfo.CurrentCulture) + "%)").PadLeft(4 + 3)}");
                 }
 
-                Console.Write($"{modStr.PadRight(6)}");
+                Console.Write($"{modStr.PadRight(6)}| {diff.Total:F2}* (Aim: {diff.Aim:F2}*, Speed: {diff.Speed:F2}*)");
                 ShowWithPercent(92.5);
                 ShowWithPercent(95);
                 ShowWithPercent(97.5);

@@ -51,6 +51,7 @@
   <ItemGroup>
     <Compile Include="Helpers.cs" />
     <Compile Include="LivePPDisplay.cs" />
+    <Compile Include="MapperPPDisplay.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
