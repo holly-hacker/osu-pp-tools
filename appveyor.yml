@@ -1,9 +1,11 @@
-version: '{build}-{branch}'
+version: 'b{build}'
 image: Visual Studio 2017
 configuration: Release
+platform: Any CPU
 before_build:
 - cmd: nuget restore
 build:
+  project: osu! pp thing.sln
   verbosity: minimal
 artifacts:
 - path: bin\Release
