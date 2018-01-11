@@ -1,11 +1,18 @@
-version: 'b{build}'
+version: b{build}
 image: Visual Studio 2017
 configuration: Release
 platform: Any CPU
 before_build:
-- cmd: nuget restore
+- cmd: >-
+    git submodule update --init --recursive
+
+    nuget restore
+
+    curl -fsSL -o References\osu!.exe https://m1.ppy.sh/r/osu!install.exe
 build:
   project: osu! pp thing.sln
   verbosity: minimal
 artifacts:
-- path: bin\Release
+- path: osu! pp thing\bin\Release
+  name: Release
+  
